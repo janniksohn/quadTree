@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuadTree Collision Detection Demo</title>
     <style>
+        body {
+            margin: 0;
+            background: #0e1117;
+        }
         canvas {
             border: 1px solid #000;
         }
@@ -19,5 +23,7 @@
 </head>
 <body>
     <canvas id="collisionCanvas" width="800" height="600"></canvas>
+    <input type="checkbox" name="hideSubBoundaries" id="hideSubBoundaries">
+    <label for="hideSubBoundaries">Hide Sub Boundaries</label>
 </body>
 </html>
