@@ -5,8 +5,13 @@ import { QuadTree, Node, BoundsNode } from "./script.js"
 const canvas = document.getElementById('collisionCanvas');
 const quadTree = new QuadTree({ x: 0, y: 0, width: canvas.width, height: canvas.height }, true, 6, 10);
 
+const userAmount = document.getElementById("amount");
 // Generate random objects for collision testing
-const objects = generateRandomObjects(100);
+const objects = generateRandomObjects(userAmount.value ?? 100);
+
+userAmount.addEventListener("blur", () => {
+    objects = generateRandomObjects(userAmount.value ?? 100);
+});
 
 // Function to generate random objects
 function generateRandomObjects(count) {
