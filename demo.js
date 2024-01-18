@@ -42,7 +42,7 @@ hideSub.addEventListener("change", function() {
     } else {
         subdivisionCanvas.classList.remove("hidden");
     }
-}
+})
 document.body.appendChild(subdivisionCanvas);
 
 // Function to draw Quadtree subdivisions
