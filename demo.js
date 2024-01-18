@@ -67,6 +67,8 @@ function drawSubdivisions(context, node) {
 function updateAndCheckCollisions() {
     quadTree.clear();
 
+    console.log(objects)
+
     // Update object positions and check for collisions
     for (const obj of objects) {
         obj.x += obj.speedX;
