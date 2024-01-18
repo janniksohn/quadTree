@@ -10,7 +10,6 @@ const userAmount = document.getElementById("amount");
 let objects = generateRandomObjects(userAmount.value || 100);
 
 userAmount.addEventListener("blur", () => {
-    console.log(Math.random() * (canvas.width - 10));
     objects = generateRandomObjects(userAmount.value || 100);
 });
 
