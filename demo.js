@@ -42,7 +42,6 @@ subdivisionCanvas.height = canvas.height;
 subdivisionCanvas.classList.add("sub", "hidden")
 const hideSub = document.getElementById("hideSubBoundaries")
 hideSub.addEventListener("change", function() {
-    console.log("chng")
     if (this.checked) {
         subdivisionCanvas.classList.add("hidden");
     } else {
@@ -67,8 +66,6 @@ function drawSubdivisions(context, node) {
 // Function to update the QuadTree and check for collisions
 function updateAndCheckCollisions() {
     quadTree.clear();
-
-    console.log(objects)
 
     // Update object positions and check for collisions
     for (const obj of objects) {
