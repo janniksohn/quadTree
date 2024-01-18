@@ -7,7 +7,7 @@ const quadTree = new QuadTree({ x: 0, y: 0, width: canvas.width, height: canvas.
 
 const userAmount = document.getElementById("amount");
 // Generate random objects for collision testing
-const objects = generateRandomObjects(userAmount.value ?? 100);
+let objects = generateRandomObjects(userAmount.value || 100);
 
 userAmount.addEventListener("blur", () => {
     objects = generateRandomObjects(userAmount.value ?? 100);
