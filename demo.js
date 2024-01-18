@@ -34,7 +34,7 @@ const subdivisionCanvas = document.createElement('canvas');
 subdivisionCanvas.width = canvas.width;
 subdivisionCanvas.height = canvas.height;
 subdivisionCanvas.classList.add("sub", "hidden")
-const hideSub = document.getElemtById("hideSubBoundaries")
+const hideSub = document.getElementById("hideSubBoundaries")
 hideSub.addEventListener("change", function() {
     console.log("chng")
     if (this.checked) {
