@@ -21,8 +21,10 @@ function generateRandomObjects(count) {
         const size = 10; // Random size between 10 and 30
         const x = Math.random() * (canvas.width - size);
         const y = Math.random() * (canvas.height - size);
-        randomObjects.push({ x, y, width: size, height: size });
-    }
+        const speedX = (Math.random() - 0.25) * 1; // Random speed between -1 and 1
+        const speedY = (Math.random() - 0.25) * 1; // Random speed between -1 and 1
+        randomObjects.push({ x, y, width: size, height: size, speedX, speedY });
+    }    
     return randomObjects;
 }
 
