@@ -33,7 +33,15 @@ function drawObjects(context, objects) {
 const subdivisionCanvas = document.createElement('canvas');
 subdivisionCanvas.width = canvas.width;
 subdivisionCanvas.height = canvas.height;
-subdivisionCanvas.classList.add("sub")
+subdivisionCanvas.classList.add("sub", "hidden")
+const hideSub = document.getElemtById("hideSubBoundaries")
+hideSub.addEventListener("change", function() {
+    if (this.checked) {
+        subdivisionCanvas.classList.add("hidden");
+    } else {
+        subdivisionCanvas.classList.remove("hidden");
+    }
+}
 document.body.appendChild(subdivisionCanvas);
 
 // Function to draw Quadtree subdivisions
