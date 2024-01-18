@@ -36,6 +36,7 @@ subdivisionCanvas.height = canvas.height;
 subdivisionCanvas.classList.add("sub", "hidden")
 const hideSub = document.getElemtById("hideSubBoundaries")
 hideSub.addEventListener("change", function() {
+    console.log("chng")
     if (this.checked) {
         subdivisionCanvas.classList.add("hidden");
     } else {
